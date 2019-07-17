@@ -33,9 +33,11 @@ public interface Constants {
 
     public static final String CLIENT_ID = "1";  // Correct example: 12567 | Incorrect example: 0987
 
-    public static final String API_DOMAIN = "http://chat.ifsoft.ru/";  //url address to which the application sends requests
+    //public static final String API_DOMAIN = "http://chat.ifsoft.ru/";  //url address to which the application sends requests
+    public static final String API_DOMAIN = "http://date.123openthedoor.com/";
 
     public static final String API_FILE_EXTENSION = ".inc.php";         // Don`t change value for this constant!
+    //http://date.123openthedoor.com/api/v2/method/account.signIn.inc.php
     public static final String API_VERSION = "v2";                      // Don`t change value for this constant!
 
     public static final String METHOD_NOTIFICATIONS_CLEAR = API_DOMAIN + "api/" + API_VERSION + "/method/notifications.clear" + API_FILE_EXTENSION;

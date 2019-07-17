@@ -2,24 +2,24 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:emojicon="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/blogs_list_row_selector">
+    android:background="@drawable/blogs_list_row_selector"
+    android:orientation="vertical">
 
     <!-- Thumbnail Image -->
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
 
         <com.pkmmte.view.CircularImageView
+            android:id="@+id/commentAuthorPhoto"
             android:layout_width="55dp"
             android:layout_height="55dp"
-            android:id="@+id/commentAuthorPhoto"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
             android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
             android:src="@drawable/profile_default_photo"
             app:border="true"
             app:border_color="@color/content_page"
@@ -27,72 +27,72 @@
             app:shadow="false" />
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:orientation="horizontal"
                 android:paddingTop="10dp"
                 android:paddingRight="10dp">
 
                 <LinearLayout
-                    android:orientation="horizontal"
+                    android:id="@+id/commentContent"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:id="@+id/commentContent"
-                    android:minHeight="24dp">
+                    android:minHeight="24dp"
+                    android:orientation="horizontal">
 
                     <LinearLayout
-                        android:orientation="vertical"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_marginRight="8dp"
                         android:layout_weight="1"
-                        android:layout_marginRight="8dp">
+                        android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/commentAuthor"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="New Text"
-                            android:id="@+id/commentAuthor"
                             android:drawableRight="@drawable/profile_verify_icon"
                             android:drawablePadding="5dp"
                             android:fontFamily="sans-serif-light"
-                            android:textStyle="bold"
+                            android:singleLine="true"
+                            android:text="New Text"
                             android:textColor="#000"
                             android:textSize="16dp"
-                            android:singleLine="true" />
+                            android:textStyle="bold" />
 
                         <github.ankushsachdeva.emojicon.EmojiconTextView
                             android:id="@+id/commentText"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
                             android:singleLine="false"
                             android:text="Comment text"
-                            android:textSize="16dp"
-                            emojicon:emojiconSize="24dp"
                             android:textColor="@color/black"
+                            android:textSize="16dp"
                             android:visibility="visible"
-                            android:fontFamily="sans-serif-light" />
+                            emojicon:emojiconSize="24dp" />
 
                     </LinearLayout>
 
                     <RelativeLayout
                         android:layout_width="wrap_content"
-                        android:layout_weight="0"
-                        android:layout_height="fill_parent">
+                        android:layout_height="fill_parent"
+                        android:layout_weight="0">
 
                         <ImageView
+                            android:id="@+id/commentAction"
                             android:layout_width="24dp"
                             android:layout_height="26dp"
-                            android:id="@+id/commentAction"
-                            android:src="@drawable/ic_action_remove"
-                            android:minHeight="26dp"
                             android:minWidth="24dp"
-                            android:scaleType="centerCrop" />
+                            android:minHeight="26dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_action_remove" />
 
                     </RelativeLayout>
 
@@ -101,21 +101,21 @@
             </LinearLayout>
 
             <LinearLayout
-                android:orientation="vertical"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true">
+                android:layout_alignParentTop="true"
+                android:orientation="vertical">
 
                 <ru.ifsoft.chat.view.ResizableImageView
+                    android:id="@+id/commentImg"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/commentImg"
-                    android:src="@drawable/img_loading"
-                    android:adjustViewBounds="true"
                     android:layout_marginTop="5dp"
-                    android:maxHeight="600dp" />
+                    android:adjustViewBounds="true"
+                    android:maxHeight="600dp"
+                    android:src="@drawable/img_loading" />
 
                 <RelativeLayout
                     android:layout_width="fill_parent"
@@ -123,53 +123,53 @@
                     android:paddingRight="10dp">
 
                     <LinearLayout
-                        android:orientation="horizontal"
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
-                        android:layout_alignParentBottom="true"
-                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="false"
                         android:layout_alignParentEnd="false"
-                        android:layout_alignParentTop="false">
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:orientation="horizontal">
 
                         <TextView
+                            android:id="@+id/commentTimeAgo"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:text="05.05.1955"
-                            android:id="@+id/commentTimeAgo"
-                            android:singleLine="true"
-                            android:fontFamily="sans-serif-light"
-                            android:textColor="@color/gray_text"
-                            android:textSize="13dp"
-                            android:layout_alignParentLeft="true"
                             android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
                             android:layout_centerVertical="true"
                             android:layout_weight="2"
-                            android:gravity="center_vertical" />
+                            android:fontFamily="sans-serif-light"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:text="05.05.1955"
+                            android:textColor="@color/gray_text"
+                            android:textSize="13dp" />
 
                         <LinearLayout
-                            android:orientation="horizontal"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:weightSum="1"
-                            android:layout_weight="0">
+                            android:layout_weight="0"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
 
                             <ImageView
+                                android:id="@+id/commentLike"
                                 android:layout_width="32dp"
                                 android:layout_height="match_parent"
-                                android:id="@+id/commentLike"
-                                android:src="@drawable/perk"
                                 android:paddingLeft="5dp"
-                                android:paddingRight="5dp" />
+                                android:paddingRight="5dp"
+                                android:src="@drawable/perk" />
 
                             <TextView
+                                android:id="@+id/commentLikesCount"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:text="0"
-                                android:id="@+id/commentLikesCount"
-                                android:gravity="center"
                                 android:layout_marginLeft="3dp"
+                                android:gravity="center"
                                 android:paddingLeft="3dp"
                                 android:paddingRight="3dp"
+                                android:text="0"
                                 android:textSize="12dp" />
                         </LinearLayout>
                     </LinearLayout>

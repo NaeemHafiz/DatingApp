@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<shape
-    xmlns:android="http://schemas.android.com/apk/res/android">
-    <stroke 
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <stroke
         android:width="0dp"
-        android:color="@color/colorPrimaryButton"/>
-    <corners 
-        android:radius="2dp" />
+        android:color="#e2b660" />
+    <corners android:radius="2dp" />
 
-    <padding 
+    <padding
+        android:bottom="0dp"
         android:left="10dp"
         android:right="10dp"
-        android:top="0dp"
-        android:bottom="0dp"/>
+        android:top="0dp" />
 
-    <solid android:color="@color/colorPrimaryButton"/>
+    <solid android:color="#e2b660" />
 
 </shape>

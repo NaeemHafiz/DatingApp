@@ -204,9 +204,9 @@ public class SettingsFragment extends PreferenceFragment implements Constants {
 
                 alertDialog.setView(aboutDialogContent);
 
-                aboutDialogAppName = (TextView) aboutDialogContent.findViewById(R.id.aboutDialogAppName);
-                aboutDialogAppVersion = (TextView) aboutDialogContent.findViewById(R.id.aboutDialogAppVersion);
-                aboutDialogAppCopyright = (TextView) aboutDialogContent.findViewById(R.id.aboutDialogAppCopyright);
+                aboutDialogAppName =  aboutDialogContent.findViewById(R.id.aboutDialogAppName);
+                aboutDialogAppVersion =  aboutDialogContent.findViewById(R.id.aboutDialogAppVersion);
+                aboutDialogAppCopyright =  aboutDialogContent.findViewById(R.id.aboutDialogAppCopyright);
 
                 aboutDialogAppName.setText(getString(R.string.app_name));
                 aboutDialogAppVersion.setText("Version " + getString(R.string.app_version));
@@ -385,26 +385,17 @@ public class SettingsFragment extends PreferenceFragment implements Constants {
                 if (newValue instanceof Boolean) {
 
                     Boolean value = (Boolean) newValue;
-
                     if (value) {
-
                         mAllowPhotosComments = 1;
-
                     } else {
-
                         mAllowPhotosComments = 0;
                     }
-
                     if (App.getInstance().isConnected()) {
-
                         setAllowPhotosComments();
-
                     } else {
-
                         Toast.makeText(getActivity().getApplicationContext(), getText(R.string.msg_network_error), Toast.LENGTH_SHORT).show();
                     }
                 }
-
                 return true;
             }
         });

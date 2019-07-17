@@ -9,11 +9,13 @@
 
         <CheckBoxPreference
             android:key="allowMessages"
+            android:backgroundTint="#e2b660"
             android:title="@string/settings_allow_messages"
             android:summary="@string/settings_allow_messages_summary">
         </CheckBoxPreference>
 
         <CheckBoxPreference
+            android:backgroundTint="#e2b660"
             android:key="allowPhotosComments"
             android:title="@string/settings_allow_comments_to_photos">
         </CheckBoxPreference>

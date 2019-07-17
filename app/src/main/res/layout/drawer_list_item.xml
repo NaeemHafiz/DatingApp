@@ -1,41 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:padding="4dp"
     android:layout_height="48dp"
-    android:background="@color/darkorange">
+    android:background="@color/darkorange"
+    android:padding="4dp">
 
     <ImageView
         android:id="@+id/icon"
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
         android:layout_marginLeft="12dp"
         android:contentDescription="@string/settings_terms"
-        android:src="@drawable/ic_action_new"
-        android:layout_centerVertical="true" />
+        android:src="@drawable/ic_action_new" />
 
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
+        android:layout_marginLeft="12dp"
         android:layout_toRightOf="@id/icon"
-        android:minHeight="?android:attr/listPreferredItemHeightSmall"
-        android:textAppearance="?android:attr/textAppearanceListItemSmall"
-        android:textColor="@color/drawer_item_text"
         android:gravity="center_vertical"
+        android:minHeight="?android:attr/listPreferredItemHeightSmall"
         android:paddingRight="40dp"
         android:text="Item Text"
-        android:textSize="20dp"
-        android:layout_marginLeft="12dp" />
-    
-    <TextView android:id="@+id/counter"
+        android:textAppearance="?android:attr/textAppearanceListItemSmall"
+        android:textColor="@color/drawer_item_text"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/counter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/darkorange"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
         android:layout_marginRight="8dp"
-        android:textColor="@color/white"/>
+        android:background="@color/darkorange"
+        android:textColor="@color/white" />
 
 </RelativeLayout>

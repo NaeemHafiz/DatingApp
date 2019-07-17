@@ -1,233 +1,233 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="#fff"
     android:orientation="vertical"
-    tools:context="ru.ifsoft.chat.AccountSettingsFragment"
-    android:background="#fff">
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="ru.ifsoft.chat.AccountSettingsFragment">
 
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/scrollView2"
         android:background="#fff">
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
             android:padding="20dp">
 
             <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:hint="@string/placeholder_fullname"
-                android:ems="10"
-                app:backgroundTint="@color/light_gray"
                 android:id="@+id/fullname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:hint="@string/placeholder_fullname"
+                android:inputType="textPersonName"
                 android:maxLength="55"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="10dp" />
+                app:backgroundTint="@color/light_gray" />
 
             <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:hint="@string/placeholder_location"
-                android:ems="10"
-                app:backgroundTint="@color/light_gray"
                 android:id="@+id/location"
-                android:maxLength="255"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="10dp" />
-
-            <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:hint="@string/placeholder_facebook_page"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
                 android:ems="10"
-                app:backgroundTint="@color/light_gray"
+                android:hint="@string/placeholder_location"
+                android:inputType="textPersonName"
+                android:maxLength="255"
+                app:backgroundTint="@color/light_gray" />
+
+            <EditText
                 android:id="@+id/facebookPage"
-                android:maxLength="255"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="10dp" />
-
-            <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/placeholder_instagram_page"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:hint="@string/placeholder_facebook_page"
+                android:inputType="textPersonName"
+                android:maxLength="255"
+                app:backgroundTint="@color/light_gray" />
+
+            <EditText
                 android:id="@+id/instagramPage"
-                android:maxLength="255"
-                app:backgroundTint="@color/light_gray"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="10dp" />
-
-            <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:hint="@string/placeholder_instagram_page"
+                android:maxLength="255"
+                app:backgroundTint="@color/light_gray" />
+
+            <EditText
+                android:id="@+id/bio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ems="10"
                 android:hint="@string/placeholder_bio"
                 android:inputType="textMultiLine"
-                android:ems="10"
-                app:backgroundTint="@color/light_gray"
                 android:maxLength="255"
-                android:id="@+id/bio"
-                android:layout_marginTop="10dp" />
+                app:backgroundTint="@color/light_gray" />
 
             <CheckBox
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/label_profile_allow_show_birth"
                 android:id="@+id/allowShowDatebirth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp" />
+                android:layout_marginBottom="8dp"
+                android:text="@string/label_profile_allow_show_birth" />
 
             <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/label_age"
-                app:backgroundTint="@color/light_gray"
                 android:id="@+id/ageField"
-                android:maxLength="3"
-                android:inputType="number"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="10dp" />
-
-            <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/label_height"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:hint="@string/label_age"
+                android:inputType="number"
+                android:maxLength="3"
+                app:backgroundTint="@color/light_gray" />
+
+            <EditText
                 android:id="@+id/heightField"
-                android:maxLength="3"
-                app:backgroundTint="@color/light_gray"
-                android:inputType="number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="10dp" />
+                android:layout_marginTop="10dp"
+                android:hint="@string/label_height"
+                android:inputType="number"
+                android:maxLength="3"
+                app:backgroundTint="@color/light_gray" />
 
             <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/label_weight"
                 android:id="@+id/weightField"
-                android:maxLength="3"
-                app:backgroundTint="@color/light_gray"
-                android:inputType="number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="10dp" />
+                android:layout_marginTop="10dp"
+                android:hint="@string/label_weight"
+                android:inputType="number"
+                android:maxLength="3"
+                app:backgroundTint="@color/light_gray" />
 
             <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Gender"
                 android:id="@+id/selectGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/gradientcolor"
+                android:text="Gender"
                 android:textColor="@color/white" />
 
             <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/label_sex_orientation"
                 android:id="@+id/selectSexOrientation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/gradientcolor"
+                android:text="@string/label_sex_orientation"
                 android:textColor="@color/white" />
 
             <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Date of Birth"
                 android:id="@+id/selectBirth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/gradientcolor"
+                android:text="Date of Birth"
                 android:textColor="@color/white" />
 
             <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Relationship status"
                 android:id="@+id/selectRelationshipStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/gradientcolor"
+                android:text="Relationship status"
                 android:textColor="@color/white" />
 
             <Button
+                android:id="@+id/selectPoliticalViews"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Political views"
-                android:id="@+id/selectPoliticalViews"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/gradientcolor"
+                android:text="Political views"
                 android:textColor="@color/dark_blue" />
 
             <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="World View"
                 android:id="@+id/selectWorldView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/gradientcolor"
+                android:text="World View"
                 android:textColor="@color/white" />
 
             <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Personal priority"
                 android:id="@+id/selectPersonalPriority"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/gradientcolor"
+                android:text="Personal priority"
                 android:textColor="@color/white" />
 
             <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Important in others"
                 android:id="@+id/selectImportantInOthers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/gradientcolor"
+                android:text="Important in others"
                 android:textColor="@color/white" />
 
             <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Smoking Views"
                 android:id="@+id/selectSmokingViews"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/gradientcolor"
+                android:text="Smoking Views"
                 android:textColor="@color/white" />
 
             <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Alcohol Views"
                 android:id="@+id/selectAlcoholViews"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/gradientcolor"
+                android:text="Alcohol Views"
                 android:textColor="@color/white" />
 
             <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="You Looking"
                 android:id="@+id/selectYouLooking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/gradientcolor"
+                android:text="You Looking"
                 android:textColor="@color/white" />
 
             <Button
+                android:id="@+id/selectYouLike"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="You Like"
-                android:id="@+id/selectYouLike"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/gradientcolor"
+                android:text="You Like"
                 android:textColor="@color/white" />
 
         </LinearLayout>

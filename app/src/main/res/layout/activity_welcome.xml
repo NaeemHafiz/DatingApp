@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/gray_bg"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/gray_bg">
 
 
     <android.support.v4.view.ViewPager
@@ -15,8 +15,8 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/darkorange"
-        android:layout_alignParentBottom="true">
+        android:layout_alignParentBottom="true"
+        android:background="@color/darkorange">
 
         <LinearLayout
             android:id="@+id/layout_markers"
@@ -37,23 +37,23 @@
             android:id="@+id/button_next"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
             android:background="@null"
             android:text="@string/action_next"
-            android:textStyle="bold"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/button_skip"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
             android:background="@null"
             android:text="@string/action_skip"
-            android:textStyle="bold"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
 
     </RelativeLayout>
 

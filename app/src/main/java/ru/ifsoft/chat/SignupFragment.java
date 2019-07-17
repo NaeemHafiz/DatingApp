@@ -110,7 +110,7 @@ public class SignupFragment extends Fragment implements Constants {
 
         setRetainInstance(true);
 
-        if (AccessToken.getCurrentAccessToken()!= null) LoginManager.getInstance().logOut();
+        if (AccessToken.getCurrentAccessToken() != null) LoginManager.getInstance().logOut();
 
         callbackManager = CallbackManager.Factory.create();
 
@@ -161,7 +161,7 @@ public class SignupFragment extends Fragment implements Constants {
 
             @Override
             public void onClick(View v) {
-            
+
                 Intent i = new Intent(getActivity(), WebViewActivity.class);
                 i.putExtra("url", METHOD_APP_TERMS);
                 i.putExtra("title", getText(R.string.signup_label_terms_and_policies));
@@ -293,9 +293,11 @@ public class SignupFragment extends Fragment implements Constants {
                 checkFullname();
             }
 
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
 
-            public void onTextChanged(CharSequence s, int start, int before, int count) {}
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
         });
 
         signupPassword.addTextChangedListener(new TextWatcher() {
@@ -305,9 +307,11 @@ public class SignupFragment extends Fragment implements Constants {
                 checkPassword();
             }
 
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
 
-            public void onTextChanged(CharSequence s, int start, int before, int count) {}
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
         });
 
         signupEmail.addTextChangedListener(new TextWatcher() {
@@ -317,9 +321,11 @@ public class SignupFragment extends Fragment implements Constants {
                 checkEmail();
             }
 
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
 
-            public void onTextChanged(CharSequence s, int start, int before, int count) {}
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
         });
 
         signupJoinHowBtn = (Button) rootView.findViewById(R.id.signupJoinHowBtn);
@@ -506,7 +512,7 @@ public class SignupFragment extends Fragment implements Constants {
 
     public void showNoStoragePermissionSnackbar() {
 
-        Snackbar.make(getView(), getString(R.string.label_no_storage_permission) , Snackbar.LENGTH_LONG).setAction(getString(R.string.action_settings), new View.OnClickListener() {
+        Snackbar.make(getView(), getString(R.string.label_no_storage_permission), Snackbar.LENGTH_LONG).setAction(getString(R.string.action_settings), new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -547,7 +553,7 @@ public class SignupFragment extends Fragment implements Constants {
         }
     }
 
-    private Bitmap resize(String path){
+    private Bitmap resize(String path) {
 
         int maxWidth = 512;
         int maxHeight = 512;
@@ -782,7 +788,7 @@ public class SignupFragment extends Fragment implements Constants {
 
         SexOrientationSelectDialog alert = new SexOrientationSelectDialog();
 
-        Bundle b  = new Bundle();
+        Bundle b = new Bundle();
         b.putInt("position", position);
 
         alert.setArguments(b);
@@ -838,7 +844,7 @@ public class SignupFragment extends Fragment implements Constants {
 
         GenderSelectDialog alert = new GenderSelectDialog();
 
-        Bundle b  = new Bundle();
+        Bundle b = new Bundle();
         b.putInt("position", position);
 
         alert.setArguments(b);
@@ -859,7 +865,7 @@ public class SignupFragment extends Fragment implements Constants {
         }
     }
 
-    private DatePickerDialog.OnDateSetListener mDateSetListener =new DatePickerDialog.OnDateSetListener() {
+    private DatePickerDialog.OnDateSetListener mDateSetListener = new DatePickerDialog.OnDateSetListener() {
 
         public void onDateSet(DatePicker view, int mYear, int monthOfYear, int dayOfMonth) {
 
@@ -980,7 +986,7 @@ public class SignupFragment extends Fragment implements Constants {
 
         signupUsername.setError(null);
 
-        return  true;
+        return true;
     }
 
     public Boolean checkFullname() {
@@ -1003,7 +1009,7 @@ public class SignupFragment extends Fragment implements Constants {
 
         signupFullname.setError(null);
 
-        return  true;
+        return true;
     }
 
     public Boolean checkPassword() {
@@ -1239,19 +1245,19 @@ public class SignupFragment extends Fragment implements Constants {
 
                                 switch (App.getInstance().getErrorCode()) {
 
-                                    case 300 : {
+                                    case 300: {
 
                                         signupUsername.setError(getString(R.string.error_login_taken));
                                         break;
                                     }
 
-                                    case 301 : {
+                                    case 301: {
 
                                         signupEmail.setError(getString(R.string.error_email_taken));
                                         break;
                                     }
 
-                                    case 500 : {
+                                    case 500: {
 
                                         Toast.makeText(getActivity(), getText(R.string.label_multi_account_msg), Toast.LENGTH_SHORT).show();
                                         break;

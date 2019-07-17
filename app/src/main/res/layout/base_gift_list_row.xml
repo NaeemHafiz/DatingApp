@@ -15,31 +15,31 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:clickable="true"
-            android:background="?attr/selectableItemBackground" >
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true">
 
             <ImageView
                 android:id="@+id/thumbnail"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/item_cover_height"
-                android:scaleType="centerCrop"
-                android:background="@drawable/profile_default_photo" />
+                android:background="@drawable/profile_default_photo"
+                android:scaleType="centerCrop" />
 
             <TextView
                 android:id="@+id/title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/thumbnail"
-                android:paddingLeft="@dimen/item_title_padding"
-                android:paddingRight="@dimen/item_title_padding"
-                android:paddingTop="@dimen/item_title_padding"
-                android:paddingBottom="@dimen/item_title_padding"
-                android:textColor="@color/black"
-                android:textSize="@dimen/item_title"
-                android:singleLine="true"
                 android:ellipsize="end"
+                android:gravity="center"
+                android:paddingLeft="@dimen/item_title_padding"
+                android:paddingTop="@dimen/item_title_padding"
+                android:paddingRight="@dimen/item_title_padding"
+                android:paddingBottom="@dimen/item_title_padding"
+                android:singleLine="true"
                 android:text="Title"
-                android:gravity="center" />
+                android:textColor="@color/black"
+                android:textSize="@dimen/item_title" />
 
         </RelativeLayout>
 

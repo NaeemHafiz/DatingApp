@@ -22,8 +22,7 @@
 
     </LinearLayout>
 
-    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+    <FrameLayout
         android:id="@+id/container_body"
         android:name="ru.ifsoft.chat.SignupFragment"
         android:layout_width="match_parent"

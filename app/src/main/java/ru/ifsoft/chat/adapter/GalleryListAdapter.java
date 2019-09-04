@@ -40,10 +40,10 @@ public class GalleryListAdapter extends RecyclerView.Adapter<GalleryListAdapter.
 
             super(view);
 
-            thumbnail = (ImageView) view.findViewById(R.id.thumbnail);
-            playImg = (ImageView) view.findViewById(R.id.playImg);
+            thumbnail =  view.findViewById(R.id.thumbnail);
+            playImg =  view.findViewById(R.id.playImg);
 
-            mProgressBar = (ProgressBar) view.findViewById(progressBar);
+            mProgressBar =  view.findViewById(progressBar);
         }
     }
 
